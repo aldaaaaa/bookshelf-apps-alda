@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Bookshelf Apps</title>
+    </head>
+    <body style="background-image: url('assets/background.jpg');">
+        <header>
+            <h1>Bookshelf Apps</h1>
+        </header>
+        <main>
+            <section class="input-section" id="addBookSection">
+                <h2 class="title-section">Masukkan Buku Baru</h2>
+                <form id="inputBook">
+                    <div class="input">
+                        <input id="inputBookTitle" type="text" placeholder="" required>
+                        <label for="inputBookTitle">Judul</label>
+                    </div>
+                    <div class="input">
+                        <input id="inputBookAuthor" type="text" placeholder="" required>
+                        <label for="inputBookAuthor">Penulis</label>
+                    </div>
+                    <div class="input">
+                        <input id="inputBookYear" type="number" placeholder="" required>
+                        <label for="inputBookYear">Tahun</label>
+                    </div>
+                    <div class="input-inline">
+                        <input id="inputBookIsComplete" type="checkbox">
+                        <label for="inputBookIsComplete">Selesai dibaca</label>
+                    </div>
+                    <div class="input-button">
+                        <button id="bookSubmit" type="submit" class="submit-button">Simpan</button>
+                    </div>
+                    <div class="success-message">Buku berhasil disimpan!</div>                
+                </form>
+            </section>
+            <section class="search-section">
+                <h2 class="title-section">Cari Buku</h2>
+                <form id="searchBook" class="search-form">
+                    <div class="input-search">
+                        <input id="searchBookTitle" type="text" placeholder="" required>
+                        <label for="searchBookTitle">Judul</label>
+                    </div>
+                    <div class="search-button-section">
+                        <button type="reset" class="reset-btn">
+                            <img src="assets/refresh.png" alt="Reset">
+                        </button>
+                        <button type="submit" class="search-btn">
+                            <img src="assets/magnifier.png" alt="Cari">
+                        </button>
+                    </div>
+                </form>
+            </section>
+            <div class="book-count-container">
+                <h2 id="bookCount">Jumlah Seluruh Buku: 0</h2>
+            </div>            
+            <div class="bookshelf-container">
+                <section class="bookshelf-section">
+                    <h2 class="title-section">Belum Selesai Dibaca</h2>
+                    <div id="incompleteBookshelfList" class="book-list"></div>
+                </section>
+                <section class="bookshelf-section">
+                    <h2 class="title-section">Selesai Dibaca</h2>
+                    <div id="completeBookshelfList" class="book-list"></div>
+                </section>
+                <div id="deleteConfirmationDialog" class="confirmation-dialog">
+                    <p>Apakah Anda yakin ingin menghapus buku ini?</p>
+                    <button id="confirmDeleteButton" class="confirm-button">Ya</button>
+                    <button id="cancelDeleteButton" class="cancel-button">Tidak</button>
+                </div>
+                <div id="overlay" class="overlay"></div>
+            </div>
+        </main>
+        <script src="js/script.js"></script>
+    </body>
+</html>

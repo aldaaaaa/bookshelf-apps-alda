@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    width: 100%;
+    color: white;
+    background-color: #001C30;
+    margin-bottom: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.title-section {
+    margin-bottom: 15px;
+}
+
+.input-section {
+    color: #001C30;
+    margin: 15px 0;
+    margin-top: 0px;
+    padding: 30px;
+    width: 80%;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+.input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #001C30;
+    pointer-events: none;
+    transition: top 0.3s, left 0.3s, font-size 0.3s;
+}
+
+.input input:focus + label,
+.input input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 5px;
+    font-size: 13px;
+    background-color: white;
+    padding: 1px 5px;
+}
+
+.input-inline {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-button {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    background-color: #001C30;
+    width: 100%;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #569DAA;
+}
+
+.success-message {
+    display: none; 
+    position: fixed;
+    top: 10px; 
+    right: 10px; 
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 9999; 
+}
+
+.search-section {
+    color: #001C30;
+    margin: 15px 0;
+    padding: 30px;
+    width: 80%;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.input-search {
+    position: relative;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.input-search input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-search label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #001C30;
+    pointer-events: none;
+    transition: top 0.3s, left 0.3s, font-size 0.3s;
+}
+
+.input-search input:focus + label,
+.input-search input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 5px;
+    font-size: 13px;
+    background-color: white;
+    padding: 2px 5px;
+}
+
+.search-button-section {
+    margin-top: -22px;
+    display: flex;
+    align-items: center;
+}
+
+.reset-btn, 
+.search-btn {
+    background-color: #001C30;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.reset-btn:hover, 
+.search-btn:hover {
+    background-color: #569DAA;
+}
+
+.book-count-container {
+    color: #001C30;
+    margin: 15px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 1rem;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+    text-align: center;
+}
+
+.bookshelf-section {
+    color: #001C30;
+    margin: 15px 0;
+    padding: 30px;
+    background: white;
+    border-radius: 1rem;
+    width: calc(50% - 20px);
+    box-shadow: 0 4px 8px rgba(15, 23, 42, 0.1);
+}
+
+.bookshelf-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.book-card {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.book-card h3,
+.book-card p {
+    margin-bottom: 10px;
+}
+
+.move-button-complete {
+    background-color: #54B435;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.move-button-complete:hover {
+    background-color: #379237;
+}
+
+.move-button-incomplete {
+    background-color: #FFD93D;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.move-button-incomplete:hover {
+    background-color: #ffb300;
+}
+
+.delete-button {
+    background-color: #ED2B2A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #D21312;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+}
+
+.confirmation-dialog {
+    display: none;
+    position: fixed;
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.confirmation-dialog p {
+    text-align: center;
+}
+
+.confirm-button, 
+.cancel-button {
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.confirm-button {
+    margin-top: 15px;
+    background-color: #379237;
+    height: 35px;
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.confirm-button:hover {
+    background-color: #379237;
+}
+
+.cancel-button {
+    margin-top: 15px;
+    background-color: #ED2B2A;
+    height: 35px;
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.cancel-button:hover {
+    background-color: #D21312;
+}
+
+@media (max-width: 768px) {
+    .bookshelf-container {
+        flex-direction: column;
+    }
+
+    .bookshelf-section, .input-section, .search-section {
+        width: 100%;
+    }
+}
